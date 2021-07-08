@@ -1,0 +1,17 @@
+<div *ngIf="card">
+    
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <img  [src]=" 'assets/cards/'+ card.name +'.png'">
+      </div>
+      <div class="col-sm-8">
+        <div class="card-body">
+            <h2>{{card.name}}</h2>
+            <p class="card-text">{{card.description}}</p>
+            <a routerLink=''>Voltar</a>
+          </div>
+      </div>
+    </div>
+</div>
+</div>

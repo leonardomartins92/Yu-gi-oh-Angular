@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { cards } from 'src/app/cards';
 
 @Component({
   selector: 'app-cards',
@@ -6,16 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cards.component.scss']
 })
 export class CardsComponent implements OnInit {
-
-  images = [
-    'assets/cards/Fusão das Figuras.png',
-    'assets/cards/Guarda-costas Imperiais.png',
-    'assets/cards/O Cavaleiro do Coringa.png',
-    'assets/cards/Sequência do Coringa.png',
-    'assets/cards/Triunfo Coringa Arcano.png'
-
-  ];
-  
+ 
+  cards = cards;
+    
   constructor() { }
 
   ngOnInit(): void {
