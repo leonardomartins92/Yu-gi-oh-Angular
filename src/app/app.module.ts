@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { CardsDetailsComponent } from './components/cards-details/cards-details.component';
+import { NewCardComponent } from './components/new-card/new-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CardsDetailsComponent } from './components/cards-details/cards-details.
     FooterComponent,
     HomeComponent,
     CardsComponent,
-    CardsDetailsComponent
+    CardsDetailsComponent,
+    NewCardComponent
   ],
   imports: [
     BrowserModule,

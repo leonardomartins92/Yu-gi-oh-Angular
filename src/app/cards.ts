@@ -12,8 +12,8 @@ export interface Card {
     },
     {
       id: 1,
-      name: 'Guarda-costas Imperiais',
-      description: 'Se você não controlar nenhum outro monstro: você pode oferecer este card como Tributo; pegue 2 monstros diferentes do seu Deck entre "O Cavaleiro da Rainha", "O Cavaleiro do Rei" e/ou "O Cavaleiro do Valete" e, para cada um, adicione-o à sua mão ou Invoque-o por Invocação-Especial. Você só pode usar este efeito de "Guarda-costas Imperiais" uma vez por turno.'
+      name: 'O Indestrutível Nokia',
+      description: 'Essa carta é imbatível'
     },
     {
       id: 2,
@@ -29,5 +29,11 @@ export interface Card {
       id: 4,
       name: 'Triunfo Coringa Arcano',
       description: 'Se este card estiver na sua mão ou no Cemitério: você pode enviar para o Cemitério 1 "O Cavaleiro da Rainha", "O Cavaleiro do Rei" e "O Cavaleiro do Valete" da sua mão e/ou da Zona de Monstros com a face para cima; Invoque este card por Invocação-Especial. Este card ganha 500 de ATK x o número combinado de cards nas mãos dos dois duelistas. Você pode descartar 1 card; destrua todos os cards com a face para cima que seu oponente controla com o mesmo tipo (Monstro, Magia ou Armadilha) que o do card descartado.'
+    },
+    {
+      id: 5,
+      name: 'Guarda-costas Imperiais',
+      description: 'Se você não controlar nenhum outro monstro: você pode oferecer este card como Tributo; pegue 2 monstros diferentes do seu Deck entre "O Cavaleiro da Rainha", "O Cavaleiro do Rei" e/ou "O Cavaleiro do Valete" e, para cada um, adicione-o à sua mão ou Invoque-o por Invocação-Especial. Você só pode usar este efeito de "Guarda-costas Imperiais" uma vez por turno.'
     }
+    
   ];

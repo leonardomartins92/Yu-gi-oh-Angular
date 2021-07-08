@@ -3,19 +3,19 @@
     <img src="assets/img/logo.png">
    
     <li [ngbNavItem]="1">
-      <a ngbNavLink>One</a>
+      <a ngbNavLink class="btn btn-outline-dark">Cards</a>
       <ng-template ngbNavContent>
         <app-cards></app-cards>
       </ng-template>
     </li>
     <li [ngbNavItem]="2">
-      <a ngbNavLink>Two</a>
+      <a ngbNavLink class="btn btn-outline-dark">Add Card</a>
       <ng-template ngbNavContent>
-        <p></p>
+        <app-new-card></app-new-card>
       </ng-template>
     </li>
-    <li [ngbNavItem]="3">
-      <a ngbNavLink>Three</a>
+    <li [ngbNavItem]="3" >
+      <a ngbNavLink  class="btn btn-outline-dark disabled" role="button" aria-disabled="true">Nothing yet</a>
       <ng-template ngbNavContent>
         <p></p>
       </ng-template>
