@@ -5,7 +5,7 @@
     <li [ngbNavItem]="1">
       <a ngbNavLink>One</a>
       <ng-template ngbNavContent>
-        <p></p>
+        <app-cards></app-cards>
       </ng-template>
     </li>
     <li [ngbNavItem]="2">
@@ -24,4 +24,4 @@
   
   <div [ngbNavOutlet]="nav" class="mt-2"></div>
   
-  <pre>Active: {{ active }}</pre>
+  
