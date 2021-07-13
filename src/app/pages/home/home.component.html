@@ -1,10 +1,38 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    
+   
+    <li [ngbNavItem]="1">
+      <a ngbNavLink class="btn btn-outline-dark">Yo-Gi-Oh</a>
+      <ng-template ngbNavContent>
+        <div class="row justify-content-center carousel">
+            <ngb-carousel>
+                <ng-template *ngFor="let card of cards" ngbSlide>
+                    <div class="picsum-img-wrapper">
+                           <img [src]=" 'assets/cards/'+ card.name +'.png'">
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink class="btn btn-outline-dark">Deck of Cards</a>
+      <ng-template ngbNavContent>
+        <div class="row justify-content-center carousel">
+            <ngb-carousel>
+                <ng-template *ngFor="let card of deckCards" ngbSlide>
+                    <div class="picsum-img-wrapper">
+                           <img [src]="card.image">
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+      </ng-template>
+    </li>
+    
+  </ul>
+  
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
 
-<div class="row justify-content-center carousel">
-    <ngb-carousel>
-        <ng-template *ngFor="let card of cards" ngbSlide>
-            <div class="picsum-img-wrapper">
-                   <img [src]=" 'assets/cards/'+ card.name +'.png'">
-            </div>
-        </ng-template>
-    </ngb-carousel>
-</div>
+
+
