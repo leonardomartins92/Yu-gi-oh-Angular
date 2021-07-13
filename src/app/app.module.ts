@@ -6,30 +6,22 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './components/home/home.component';
-import { CardsComponent } from './components/cards/cards.component';
-import { CardsDetailsComponent } from './components/cards-details/cards-details.component';
-import { NewCardComponent } from './components/new-card/new-card.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent,
-    HomeComponent,
-    CardsComponent,
-    CardsDetailsComponent,
-    NewCardComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    NgbModule
+    
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
