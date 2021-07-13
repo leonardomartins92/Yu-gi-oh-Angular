@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
@@ -13,6 +14,22 @@ const routes: Routes = [
   {
     path: 'cards', 
     loadChildren: () => import('./pages/cards/cards.module').then(m=>m.CardsModule)
+  },
+
+  {
+    path: 'players', 
+    loadChildren: () => import('./pages/players/players.module').then(m=>m.PlayersModule)
+  },
+
+  {
+    path: 'authenticated', 
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./pages/authenticated/authenticated.module').then(m=>m.AuthenticatedModule)
+  },
+
+  {
+    path: 'unauthorized', 
+    loadChildren: () => import('./pages/unauthorized/unauthorized.module').then(m=>m.UnauthorizedModule)
   },
      
   { path: '**',
