@@ -15,7 +15,7 @@ export class CardFormComponent implements OnInit {
   @Input() card!: Card;
   
   public cardForm = new FormGroup({
-    id: new FormControl(null, [Validators.required]),
+    id: new FormControl(null),
     name: new FormControl(null, [Validators.required]),
     description: new FormControl(null),
   });
@@ -23,7 +23,6 @@ export class CardFormComponent implements OnInit {
   public showFeedbackOnlyPlay = false;
 
   private subscriptions = new Subscription();
-
 
   constructor(
     private cardsService: CardsService,
@@ -60,7 +59,7 @@ export class CardFormComponent implements OnInit {
 
     this.cardsService
       .save(card)
-      .subscribe((card) => this.close(card));
+      .subscribe(card => this.close(card));
   }
 
   

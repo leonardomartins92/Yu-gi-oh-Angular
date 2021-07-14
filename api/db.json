@@ -4,17 +4,14 @@
       "id": 1,
       "login": "lucas_budelon",
       "name": "Lucas B Budelon"
-     
     },
     {
       "id": 2,
       "login": "leonardo rodrigues",
       "name": "Leonardo M Rodrigues"
-      
     }
   ],
-  "cards":[
-    
+  "cards": [
     {
       "id": 1,
       "name": "O Indestrutível Nokia",
@@ -25,7 +22,6 @@
       "name": "O Cavaleiro do Coringa",
       "description": "Você pode enviar 1 O Cavaleiro da Rainha, O Cavaleiro do Rei ou O Cavaleiro do Valete do seu Deck para o Cemitério; Invoque este card por Invocação-Especial da sua mão e, se isso acontecer, até a Fase Final, o nome deste card se torna o nome do monstro enviado. Durante a Fase Final, se este card estiver no seu Cemitério: você pode escolher 1 outro monstro Guerreiro de LUZ no seu Cemitério; embaralhe-o no Deck e, se isso acontecer, adicione este card à sua mão. Você só pode usar cada efeito de O Cavaleiro do Coringa uma vez por turno."
     },
-   
     {
       "id": 3,
       "name": "Triunfo Coringa Arcano",
@@ -33,9 +29,8 @@
     },
     {
       "id": 4,
-      "name": "Guarda-costas Imperiais",
-      "description": "Se você não controlar nenhum outro monstro: você pode oferecer este card como Tributo; pegue 2 monstros diferentes do seu Deck entre O Cavaleiro da Rainha, O Cavaleiro do Rei e/ou O Cavaleiro do Valete e, para cada um, adicione-o à sua mão ou Invoque-o por Invocação-Especial. Você só pode usar este efeito de Guarda-costas Imperiais uma vez por turno."
+      "name": "Montanha Caverguerra",
+      "description": "Quando este card for ativado: você pode adicionar 1 monstro \"Caverguerra\" do seu Deck à sua mão. No começo da Fase de Batalha, se você não controlar nenhum monstro ou se todos os monstros que você controla forem monstros Guerreiro: você pode Invocar por Invocação-Especial 1 monstro \"Caverguerra\" da sua mão com um nome diferente que o dos cards que você controla. Se um monstro Guerreiro seu seria destruído em batalha, em vez disso, você pode enviar este card para o Cemitério. Você só pode ativar 1 \"Montanha Caverguerra\" por turno."
     }
-    
   ]
 }

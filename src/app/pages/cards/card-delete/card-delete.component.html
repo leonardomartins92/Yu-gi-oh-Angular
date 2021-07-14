@@ -1,1 +1,14 @@
-<p>card-delete works!</p>
+<div class="modal-header">
+    <h4 class="modal-title">Usuário # {{card.id}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Tem certeza que deseja excluir {{card.name}}?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="close()">Fechar</button>
+    <button type="submit" class="btn btn-primary" (click)="delete()">Excluir</button>
+  </div>
+  

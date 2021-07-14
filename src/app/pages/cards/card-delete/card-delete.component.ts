@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { Card } from '../cards.models';
+import { CardsService } from '../cards.service';
 
 @Component({
   selector: 'app-card-delete',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardDeleteComponent implements OnInit {
 
-  constructor() { }
+  @Input() card!: Card;
+
+  constructor(
+    private cardsService: CardsService,
+    private activeModal: NgbActiveModal
+  ) { }
 
   ngOnInit(): void {
   }
+
+  close(card?: Card) {
+    this.activeModal.close(card);
+  }
+
+  delete() {
+    this.cardsService
+      .delete(this.card.id)
+      .subscribe(() => this.close(this.card));
+  }
+
 
 }

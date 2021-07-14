@@ -8,7 +8,7 @@
     <form [formGroup]="cardForm">
       <div class="form-group">
         <label for="exampleInputEmail1">ID</label>
-        <input type="text" class="form-control" placeholder="Enter the id" formControlName="id">
+        <input type="text" class="form-control" formControlName="id" readonly>
         <div class="invalid-feedback">
           Required Field.
         </div>

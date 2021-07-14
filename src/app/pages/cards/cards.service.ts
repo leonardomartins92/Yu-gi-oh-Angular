@@ -16,13 +16,13 @@ export class CardsService {
     return this.httpClient.get<Card[]>(`${environment.api}/cards`);
   }
 
-  delete(id: string){
+  delete(id: number){
     return this.httpClient.delete<Card>(`${environment.api}/cards/${id}`);
   }
 
   save(card: Card){
     if(card.id){
-      return this.httpClient.put<Card>(`${environment}/cards/${card.id}`, card);
+      return this.httpClient.put<Card>(`${environment.api}/cards/${card.id}`, card);
     }else {
       return this.httpClient.post<Card>(`${environment.api}/cards`, card);
     }
