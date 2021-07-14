@@ -16,13 +16,17 @@ export class PlayersService {
     return this.httpClient.get<Player[]>(`${environment.api}/players`);
   }
 
-  delete(id: string){
+  getOne(id: string){
+    return this.httpClient.get<Player>(`${environment.api}/players/${id}`);
+  }
+
+  delete(id: number){
     return this.httpClient.delete<Player>(`${environment.api}/players/${id}`);
   }
 
   save(card: Player){
     if(card.id){
-      return this.httpClient.put<Player>(`${environment}/players/${card.id}`, card);
+      return this.httpClient.put<Player>(`${environment.api}/players/${card.id}`, card);
     }else {
       return this.httpClient.post<Player>(`${environment.api}/players`, card);
     }

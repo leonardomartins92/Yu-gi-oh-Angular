@@ -22,6 +22,11 @@ const routes: Routes = [
   },
 
   {
+    path: 'register', 
+    loadChildren: () => import('./pages/player-form/player-form.module').then(m=>m.PlayerFormModule)
+  },
+
+  {
     path: 'authenticated', 
     canActivate: [AuthGuard],
     loadChildren: () => import('./pages/authenticated/authenticated.module').then(m=>m.AuthenticatedModule)
