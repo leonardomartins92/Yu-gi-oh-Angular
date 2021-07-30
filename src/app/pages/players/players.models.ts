@@ -1,7 +1,8 @@
 export interface Player {
-    id: number;
-    login: string;
-    name: string;
+    id: string;
+    cpf: string;
+    nome: string;
+    email: string
   }
 
   

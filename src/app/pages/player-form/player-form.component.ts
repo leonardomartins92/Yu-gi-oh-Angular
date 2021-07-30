@@ -18,8 +18,9 @@ export class PlayerFormComponent implements OnInit {
   
   public playerForm = new FormGroup({
     id: new FormControl(null),
-    name: new FormControl(null, [Validators.required]),
-    login: new FormControl(null),
+    nome: new FormControl(null, [Validators.required]),
+    cpf: new FormControl(null),
+    email: new FormControl(null)
   });
 
 

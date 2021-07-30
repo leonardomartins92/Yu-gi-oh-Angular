@@ -1,5 +1,7 @@
 export interface Card {
     id: number;
-    name?: string;
-    description?: string;
+    nome?: string;
+    detalhes?: string;
+    atributo_ataque?: number,
+    atributo_defesa?: number
   }

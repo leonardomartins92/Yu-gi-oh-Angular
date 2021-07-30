@@ -9,7 +9,7 @@
   <tbody>
     <tr *ngFor="let player of players">
       <th scope="row">{{player.id}}</th>
-      <td>{{player.name}}</td>
+      <td>{{player.nome}}</td>
       <td><button type="button" class="btn btn-danger" (click)="delete(player)" >Delete</button></td>
       <td><button type="button" class="btn btn-secondary" (click)="edit(player)" >Edit</button></td>
     </tr>

@@ -16,6 +16,10 @@ export class CardsService {
     return this.httpClient.get<Card[]>(`${environment.api}/cards`);
   }
 
+  getOne(id: number){
+    return this.httpClient.get<Card>(`${environment.api}/cards/${id}`);
+  }
+
   delete(id: number){
     return this.httpClient.delete<Card>(`${environment.api}/cards/${id}`);
   }

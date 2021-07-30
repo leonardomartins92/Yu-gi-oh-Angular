@@ -20,7 +20,7 @@ export class PlayersService {
     return this.httpClient.get<Player>(`${environment.api}/players/${id}`);
   }
 
-  delete(id: number){
+  delete(id: string){
     return this.httpClient.delete<Player>(`${environment.api}/players/${id}`);
   }
 

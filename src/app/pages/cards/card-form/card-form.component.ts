@@ -16,8 +16,10 @@ export class CardFormComponent implements OnInit {
   
   public cardForm = new FormGroup({
     id: new FormControl(null),
-    name: new FormControl(null, [Validators.required]),
-    description: new FormControl(null),
+    nome: new FormControl(null, [Validators.required]),
+    descricao: new FormControl(null),
+    atributo_ataque: new FormControl(null),
+    atributo_defesa: new FormControl(null)
   });
 
   public showFeedbackOnlyPlay = false;

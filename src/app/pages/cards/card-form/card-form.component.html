@@ -14,12 +14,20 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Name</label>
-        <input type="text" class="form-control" placeholder="Name" formControlName="name">
+        <label for="nome">Name</label>
+        <input type="text" class="form-control" placeholder="Name" formControlName="nome">
       </div>
       <div class="form-group">
-        <label for="description">Description</label>
-        <textarea class="form-control" formControlName="description" rows="3"></textarea>
+        <label for="descricao">Attack</label>
+        <textarea class="form-control" formControlName="atributo_ataque"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="descricao">Defense</label>
+        <textarea class="form-control" formControlName="atributo_defesa"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="descricao">Description</label>
+        <textarea class="form-control" formControlName="detalhes" rows="3"></textarea>
       </div>
     </form>
     <div class="alert alert-danger" role="alert" *ngIf="cardForm.invalid">

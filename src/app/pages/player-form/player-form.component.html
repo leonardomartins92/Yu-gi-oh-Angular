@@ -13,12 +13,16 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Name</label>
-                <input type="text" class="form-control" placeholder="Name" formControlName="name" [readonly]="block" >
+                <label for="nome">Name</label>
+                <input type="text" class="form-control" placeholder="Name" formControlName="nome" [readonly]="block" >
             </div>
             <div class="form-group">
-                <label for="exampleInputLogin">Login</label>
-                <input type="text" class="form-control" placeholder="Login" formControlName="login" [readonly]="block">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" placeholder="CPF" formControlName="cpf" [readonly]="block">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="text" class="form-control" placeholder="E-mail" formControlName="email" [readonly]="block">
             </div>
         </form>
         <div class="alert alert-danger" role="alert" *ngIf="playerForm.invalid">
