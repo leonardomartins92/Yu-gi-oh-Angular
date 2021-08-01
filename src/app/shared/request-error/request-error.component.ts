@@ -9,6 +9,8 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class RequestErrorComponent implements OnInit {
 
+  @Input() message = '';
+ 
   @Input() error!: HttpErrorResponse;
   constructor(public activeModal: NgbActiveModal) {
   }
