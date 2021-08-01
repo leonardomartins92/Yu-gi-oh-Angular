@@ -18,11 +18,11 @@ export class GamesComponent implements OnInit {
 
   players: Player[] = [];
   cards: Card[] = [];
-  playersInGame: Player[]=[];
-   
-  play: Play ={
-    card: this.cards[0],
-    player: this.players[0]
+  playersInGame: Player[] = [];
+
+  play: Play = {
+    cardId: 0,
+    playerId: ''
   };
 
   clicked1 = false;
@@ -30,43 +30,47 @@ export class GamesComponent implements OnInit {
   clicked3 = false;
   clicked4 = false;
 
-  playRealized = [false,false,false, false];
-  
+  playRealized = [false, false, false, false];
+
   game: Game = {
-    plays: []
+    plays: [],
+    players: []
   }
-     
+
   constructor(
-    private playerService: PlayersService, 
-    private cardService: CardsService, 
-    private gameService:GamesService) { }
+    private playerService: PlayersService,
+    private cardService: CardsService,
+    private gameService: GamesService) { }
 
   ngOnInit(): void {
     this.playerService.getAll().subscribe(p => this.players = p),
-    this.cardService.getAll().subscribe(c=>this.cards = c)
-    }
+      this.cardService.getAll().subscribe(c => this.cards = c)
+  }
 
   addPlayer(playerId: string) {
     this.playerService.getOne(playerId).subscribe(player => {
       this.playersInGame.push(player),
-        this.players = this.players.filter(p => p.id != playerId)
+      this.players = this.players.filter(p => p.id != playerId)
     });
   }
 
-  addCard(cardId: number, playerIndex:number){
+  addCard(cardId: number, playerIndex: number) {
     this.playRealized[playerIndex] = true;
-    this.cardService.getOne(cardId).subscribe(c=>{
-      this.play.card = c,
-      this.play.player = this.playersInGame[playerIndex],
-      this.game.plays.push(Object.assign({}, this.play))            
-    });
-    setTimeout(()=>{this.playRealized[playerIndex] = false;}, 3000)  
-    
+
+    this.game.players.push(Object.assign({}, this.playersInGame[playerIndex]))
+    this.play.playerId = this.playersInGame[playerIndex].id,
+      this.play.cardId = cardId,
+      this.game.plays.push(Object.assign({}, this.play))
+
+    setTimeout(() => { this.playRealized[playerIndex] = false; }, 1500)
+
   }
 
-  submit(){
-    this.gameService.save(this.game).subscribe(()=> window.location.reload())
+  submit() {
+    this.game;
+    debugger;
+    this.gameService.save(this.game).subscribe(() => window.location.reload())
   }
 
-  
+
 }

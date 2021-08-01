@@ -17,9 +17,9 @@ export class CardFormComponent implements OnInit {
   public cardForm = new FormGroup({
     id: new FormControl(null),
     nome: new FormControl(null, [Validators.required]),
-    descricao: new FormControl(null),
-    atributo_ataque: new FormControl(null),
-    atributo_defesa: new FormControl(null)
+    detalhes: new FormControl(null),
+    atributoAtaque: new FormControl(null),
+    atributoDefesa: new FormControl(null)
   });
 
   public showFeedbackOnlyPlay = false;
@@ -54,7 +54,7 @@ export class CardFormComponent implements OnInit {
     const card: Card = this.cardForm.value;
 
     debugger;
-
+    
     if (this.cardForm.invalid) {
       return;
     }
