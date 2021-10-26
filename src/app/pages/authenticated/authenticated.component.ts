@@ -9,6 +9,7 @@ export class AuthenticatedComponent implements OnInit {
 
   constructor() { }
 
+  nome: string = ''
   ngOnInit(): void {
   }
 

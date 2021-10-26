@@ -2,6 +2,7 @@ import { Router} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Player } from './players.models';
 import { PlayersService } from './players.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-players',
@@ -10,12 +11,12 @@ import { PlayersService } from './players.service';
 })
 export class PlayersComponent implements OnInit {
 
-  players: Player[] = [];
+  players$!: Observable<Player[]>;
   
   constructor(private playersService: PlayersService, private route: Router) { }
 
   ngOnInit(): void {
-    this.playersService.getAll().subscribe(player=>this.players=player);
+    this.players$ = this.playersService.getAll();
   }
 
   add() {
